@@ -22,7 +22,7 @@ const login = async (req, res) => {
 const dashboard = async (req, res) => {
 	const authHeader = req.headers.authorization;
 
-	if (!authHeader || !authHeader.startsWith('Barer ')) {
+	if (!authHeader || !authHeader.startsWith('Bearer ')) {
 		throw new CustomAPIError('No token provided', 401);
 	}
 
